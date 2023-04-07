@@ -1,0 +1,65 @@
+﻿<Window x:Class="JackCarrollAssignmentM6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="350" Width="700">
+    <Grid Background="#192033">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Display panel -->
+        <Grid Grid.Row="0" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="calc" Text="0" FontSize="24" TextAlignment="Right" VerticalAlignment="Center" Background="#a8bcd4"/>
+        </Grid>
+
+        <!-- Button panel -->
+        <Grid Grid.Row="1" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 1 -->
+            <Button Content="AC" Grid.Row="0" Grid.Column="0" Background="#5e5f62" Click="clear"/>
+            <Button Content="+/-" Grid.Row="0" Grid.Column="1" Background="#5e5f62" Click="negative"/>
+            <Button Content="/" Grid.Row="0" Grid.Column="2" Background="#5e5f62" Click="operation"/>
+            <Button Content="^" Grid.Row="0" Grid.Column="3" Height="45" Background="#5e5f62" Click="operation"/>
+
+            <!-- Row 2 -->
+            <Button Content="7" Grid.Row="1" Grid.Column="0" Click="addNum" Background="#5e5f62"/>
+            <Button Content="8" Grid.Row="1" Grid.Column="1" Click="addNum" Background="#5e5f62"/>
+            <Button Content="9" Grid.Row="1" Grid.Column="2" Click="addNum" Background="#5e5f62"/>
+            <Button Content="*" Grid.Row="1" Grid.Column="3" Height="45" Background="#5e5f62" Click="operation"/>
+
+            <!-- Row 3 -->
+            <Button Content="4" Grid.Row="2" Grid.Column="0" Click="addNum" Background="#5e5f62"/>
+            <Button Content="5" Grid.Row="2" Grid.Column="1" Click="addNum" Background="#5e5f62"/>
+            <Button Content="6" Grid.Row="2" Grid.Column="2" Click="addNum" Background="#5e5f62"/>
+            <Button Content="-" Grid.Row="2" Grid.Column="3" Height="45" Background="#5e5f62" Click="operation"/>
+
+            <!-- Row 4 -->
+            <Button Content="1" Grid.Row="3" Grid.Column="0" Click="addNum" Background="#5e5f62"/>
+            <Button Content="2" Grid.Row="3" Grid.Column="1" Click="addNum" Background="#5e5f62"/>
+            <Button Content="3" Grid.Row="3" Grid.Column="2" Click="addNum" Background="#5e5f62"/>
+            <Button Content="+" Grid.Row="3" Grid.Column="3" Height="45" Click="operation" Background="#5e5f62"/>
+
+            <!-- Row 5 -->
+            <Button Content="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="addNum" Background="#5e5f62"/>
+            <Button Content="." Grid.Row="4" Grid.Column="2" Click="addNum" Background="#5e5f62"/>
+            <Button Content="=" Grid.Row="4" Grid.Column="3" Height="45" Click="equals" Background="#5e5f62"/>
+        </Grid>
+    </Grid>
+</Window>
